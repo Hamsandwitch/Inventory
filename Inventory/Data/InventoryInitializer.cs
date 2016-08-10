@@ -12,12 +12,12 @@ namespace Inventory.Data
 		{
 			var customers = new List<Customer>
 			{
-			new Customer {FirstName="Antonio", LastName="Brown", },
-			new Customer {FirstName="Keenan", LastName="Allen", },
-			new Customer {FirstName="Alshon", LastName="Jeffery", },
-			new Customer {FirstName="Brandon", LastName="Marshall", },
-			new Customer {FirstName="Julio", LastName="Jones", },
-			new Customer {FirstName="Julian", LastName="Edelman", }
+			new Customer {FirstName="Antonio", LastName="Brown", LastPurchase=DateTime.Parse("2016-07-22")},
+			new Customer {FirstName="Keenan", LastName="Allen", LastPurchase=DateTime.Parse("2016-07-05")},
+			new Customer {FirstName="Alshon", LastName="Jeffery", LastPurchase=DateTime.Parse("2016-08-07")},
+			new Customer {FirstName="Brandon", LastName="Marshall", LastPurchase=DateTime.Parse("2016-07-14")},
+			new Customer {FirstName="Julio", LastName="Jones", LastPurchase=DateTime.Parse("2016-03-21")},
+			new Customer {FirstName="Julian", LastName="Edelman", LastPurchase=DateTime.Parse("2016-07-24")}
 			};
 
 			customers.ForEach(s => context.Customers.Add(s));
