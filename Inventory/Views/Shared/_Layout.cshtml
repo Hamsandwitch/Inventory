@@ -20,7 +20,7 @@
                 <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
             </div>
             <!--logo start-->
-            <a href="index.html" class="logo"><b>ACME INVENTORY</b></a>
+            <a href="~/#" class="logo"><b>ACME INVENTORY</b></a>
             <!--logo end-->
             <div class="nav notify-row" id="top_menu">
                 <!--  notification start -->
@@ -87,21 +87,37 @@
                                         </div>
                                     </div>
                                 </a>
-                            </li>
-                            <li class="external">
-                                <a href="#">See All Tasks</a>
-                            </li>
+                                <!--</li>   ## at bottom of drop-nav ##
+                                <li class="external">
+                                    <a href="#">See All Tasks</a>
+                                </li>-->
                         </ul>
                     </li>
                     <!-- settings end -->
                 </ul>
                 <!--  notification end -->
             </div>
-            <div class="top-menu">
-                <ul class="nav pull-right top-menu">
+
+            <div class="container">
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                        <li>@Html.ActionLink("Departments", "Index", "Departments")</li>
+                        <li>@Html.ActionLink("Products", "Index", "Products")</li>
+                        <li>@Html.ActionLink("Transactions", "Index", "Transactions")</li>
+                        <li>@Html.ActionLink("Employees", "Index", "Employees")</li>
+                        <li>@Html.ActionLink("Customers", "Index", "Customers")</li>
+                    </ul>
+                    @Html.Partial("_LoginPartial")
+                </div>
+            </div>
+           <!-- <div class="top-menu">
+                 <ul class="nav pull-right top-menu">
                     <li><a class="logout" href="login.html">Logout</a></li>
                 </ul>
-            </div>
+                
+            </div>-->
         </header>
         <!--header end-->
         <!-- **********************************************************************************************************************************************************
@@ -113,11 +129,11 @@
                 <!-- sidebar menu start-->
                 <ul class="sidebar-menu" id="nav-accordion">
 
-                    <p class="centered"><a href="profile.html"><img src="Content/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
+                    <p class="centered"><a href="profile.html"><img src="~/Content/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
                     <h5 class="centered">CURRENT USER</h5>
 
                     <li class="mt">
-                        <a class="active" href="index.html">
+                        <a class="active" href="~/#">
                             <i class="fa fa-dashboard"></i>
                             <span>Dashboard</span>
                         </a>
@@ -178,7 +194,7 @@
                     </li>
                     <li class="sub-menu">
                         <a href="javascript:;">
-                            <i class=" fa fa-bar-chart-o"></i>
+                            <i class="fa fa-bar-chart-o"></i>
                             <span>Charts</span>
                         </a>
                         <ul class="sub">
@@ -192,13 +208,16 @@
             </div>
         </aside>
         <!--sidebar end-->
+        <section id="main-content">
+            <section class="wrapper">
+                <div class="row">@RenderBody()</div>
+            </section>
+        </section>
     </section>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Contoso University</p>
-        </footer>
+    <hr />
+    <footer>
+        <p>&copy; @DateTime.Now.Year - Contoso University</p>
+    </footer>
     </div>
 
     @Scripts.Render("~/bundles/jquery")
