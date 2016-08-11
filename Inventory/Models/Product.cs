@@ -23,6 +23,7 @@ namespace Inventory.Models
 
 		public string Description { get; set; }
 
+		[Display(Name = "Count")]
 		public int InventoryCount { get; set; }
 	}
 }
