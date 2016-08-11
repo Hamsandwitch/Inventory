@@ -19,6 +19,7 @@ namespace Inventory.Models
 
 		[DataType(DataType.Currency)]
 		[Column(TypeName = "money")]
+		[Display(Name = "Total Sales")]
 		public decimal TotalSales { get; set; }
 
 	}
