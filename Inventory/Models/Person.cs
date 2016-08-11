@@ -9,6 +9,7 @@ namespace Inventory.Models
 {
 	public abstract class Person
 	{
+		[Key]
 		public int ID { get; set; }
 
 		[Required]

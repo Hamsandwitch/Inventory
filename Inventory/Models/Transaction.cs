@@ -9,7 +9,9 @@ namespace Inventory.Models
 {
 	public class Transaction
 	{
+		[Key]
 		public int TransactionID { get; set; }
+
 		public int ID { get; set; } // Customer's ID
 
 		[DataType(DataType.Currency)]

@@ -1,34 +1,58 @@
 ﻿@model Inventory.Models.Department
 
 @{
-    ViewBag.Title = "Details";
+	ViewBag.Title = "Details";
 }
 
 <h2>Details</h2>
 
 <div>
-    <h4>Department</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
+	<h4>Department</h4>
+	<hr />
+	<dl class="dl-horizontal">
+		<dt>
+			@Html.DisplayNameFor(model => model.Name)
+		</dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
+		<dd>
+			@Html.DisplayFor(model => model.Name)
+		</dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.TotalSales)
-        </dt>
+		<dt>
+			@Html.DisplayNameFor(model => model.TotalSales)
+		</dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.TotalSales)
-        </dd>
+		<dd>
+			@Html.DisplayFor(model => model.TotalSales)
+		</dd>
+		<dt>
+			@Html.DisplayNameFor(model => model.Managers)
+		</dt>
+		<dd>
+			<table class="table">
+				<tr>
+					<th>Name</th>
+					<th>Salary</th>
+				</tr>
+				@foreach (var item in Model.Managers)
+				{
+					<tr>
+						<td>
+							@Html.DisplayFor(modelItem => item.FullName)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.Salary)
+						</td>
+					</tr>
+				}
+			</table>
+		</dd>
 
-    </dl>
+
+
+	</dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.DepartmentID }) |
-    @Html.ActionLink("Back to List", "Index")
+	@Html.ActionLink("Edit", "Edit", new { id = Model.DepartmentID }) |
+	@Html.ActionLink("Back to List", "Index")
 </p>

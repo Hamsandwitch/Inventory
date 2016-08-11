@@ -9,6 +9,7 @@ namespace Inventory.Models
 {
 	public class Department
 	{
+		[Key]
 		[Display(Name = "ID")]
 		public int DepartmentID { get; set; }
 
