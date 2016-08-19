@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Acme Inventory</title>
+    <title>@ViewBag.Title - Trax</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -20,7 +20,7 @@
                 <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
             </div>
             <!--logo start-->
-            <a href="~/#" class="logo"><b>ACME INVENTORY</b></a>
+            <a href="~/#" class="logo"><b>Trax</b></a>
             <!--logo end-->
             <div class="nav notify-row" id="top_menu">
                 <!--  notification start -->
@@ -125,7 +125,7 @@
                 <!-- sidebar menu start-->
                 <ul class="sidebar-menu" id="nav-accordion">
 
-                    <p class="centered"><a href="profile.html"><img src="~/Content/img/JacksGrotto.png" class="img-circle" width="150"></a></p>
+                    <p class="centered"><a href="profile.html"><img src="~/Content/img/JacksGrottoGreen.png" class="img-circle" width="150"></a></p>
                     <h5 class="centered">CURRENT USER</h5>
 
                     <li class="mt">
@@ -210,14 +210,15 @@
             </section>
         </section>
     </section>
-    <hr />
-    <footer>
-        <p>&copy; @DateTime.Now.Year - Contoso University</p>
-    </footer>
-    </div>
-
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+    
+    <section id="footer">
+        <footer>
+            <hr />
+            <p>&copy; @DateTime.Now.Year - Trax Inventory</p>
+        </footer>
+    </section>
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
 </body>
 </html>

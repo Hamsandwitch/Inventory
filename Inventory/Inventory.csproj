@@ -205,6 +205,7 @@
     <Content Include="Content\gritter\images\gritter.png" />
     <Content Include="Content\gritter\images\ie-spacer.gif" />
     <Content Include="Content\img\JacksGrotto.png" />
+    <Content Include="Content\img\JacksGrottoGreen.png" />
     <Content Include="Content\lineicons\fonts\linecons.svg" />
     <Content Include="Content\lineicons\index.html" />
     <Content Include="Content\lineicons\lte-ie7.js" />
