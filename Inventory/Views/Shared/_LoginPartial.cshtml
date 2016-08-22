@@ -23,9 +23,18 @@
 }
 else
 {
-                <ul class="nav navbar-nav navbar-right">
-                    <li>@Html.ActionLink("Register", "Register", "Account", new { id = "registerLink" }, new { @class = "btn btn-info" })</li>
-                    <li></li>
-                    <li>@Html.ActionLink("Log in", "Login", "Account", new { id = "loginLink" }, new { @class = "btn btn-info" })</li>
-                </ul>
-            }
+    <div class="navbar-right">
+        <div class="btn-group">
+            <button type="button" class="btn btn-theme dropdown-toggle" data-toggle="dropdown">
+                Please sign in
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li>@Html.ActionLink("Log in", "Login", "Account", new { id = "loginLink" }, new { @class = "btn btn-info" })</li>
+                <li>@Html.ActionLink("Register", "Register", "Account", new { id = "registerLink" }, new { @class = "btn btn-info" })</li>
+            </ul>
+        </div>
+    </div>
+}
+
+
