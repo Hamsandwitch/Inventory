@@ -58,8 +58,11 @@ namespace Inventory.Data
 
 			var transactions = new List<Transaction>
 			{
-				new Transaction {TransactionID=1, ID=1, Date=DateTime.Parse("2016-08-03"), Total=6.48m }
+				new Transaction {ID=1, Date=DateTime.Parse("2016-08-03"), Total=6.48m, Products=products}
 			};
+
+			transactions.ForEach(s => context.Transactions.Add(s));
+			context.SaveChanges();
 		}
 	}
 }

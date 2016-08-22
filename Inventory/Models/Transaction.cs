@@ -24,5 +24,6 @@ namespace Inventory.Models
 		public DateTime Date { get; set; }
 
 		public virtual ICollection<Product> Products { get; set; }
+		public virtual Customer Customer { get; set; }
 	}
 }
