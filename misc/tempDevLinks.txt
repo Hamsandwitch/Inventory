@@ -13,3 +13,15 @@
                 </div>
             </div>
             <!-- END TEMPORARY DEV LINKS-->
+
+
+
+
+<a href="general.html">General
+
+
+@Html.ActionLink("Departments", "Index", "Departments")
+@Html.ActionLink("Products", "Index", "Products")
+@Html.ActionLink("Transactions", "Index", "Transactions")
+@Html.ActionLink("Employees", "Index", "Employees")
+@Html.ActionLink("Customers", "Index", "Customers")

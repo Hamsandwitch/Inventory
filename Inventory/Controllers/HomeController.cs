@@ -26,5 +26,12 @@ namespace Inventory.Controllers
 
 			return View();
 		}
-	}
+
+        public ActionResult Jack()
+        {
+            ViewBag.Message = "Jack";
+
+            return View();
+        }
+    }
 }
