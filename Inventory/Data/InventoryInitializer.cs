@@ -26,21 +26,44 @@ namespace Inventory.Data
 			var employees = new List<Employee>
 			{
 				new Employee {FirstName="Jay", LastName="Cutler", HireDate=DateTime.Parse("2016-08-02"), Salary=54000},
-				new Employee {FirstName="Tom", LastName="Brady", HireDate=DateTime.Parse("2016-07-22"), Salary=48000},
+                new Employee {FirstName="Tom", LastName="Hanks", HireDate=DateTime.Parse("2014-08-02"), Salary=80000},
+                new Employee {FirstName="Tom", LastName="Brady", HireDate=DateTime.Parse("2016-07-22"), Salary=48000},
 				new Employee {FirstName="Aaron", LastName="Rodgers", HireDate=DateTime.Parse("2016-02-11"), Salary=63000},
-				new Employee {FirstName="Matt", LastName="Ryan", HireDate=DateTime.Parse("2016-05-27"), Salary=28000},
 				new Employee {FirstName="Cam", LastName="Newton", HireDate=DateTime.Parse("2016-07-03"), Salary=49000},
 			};
 
 			employees.ForEach(s => context.Employees.Add(s));
 			context.SaveChanges();
 
-			var departments = new List<Department>
+            var musicManager = new List<Employee>
+            {
+                employees[0],
+            };
+
+            var moviesManager = new List<Employee>
+            {
+                employees[1],
+            };
+
+            var computersManager = new List<Employee>
+            {
+                employees[2],
+
+            };
+
+            var tvsManager = new List<Employee>
+            {
+                employees[3],
+                employees[4]
+            };
+
+
+            var departments = new List<Department>
 			{
-				new Department {Name="Music", TotalSales=0, Managers=employees},
-				new Department {Name="Movies", TotalSales=0},
-				new Department {Name="Computers", TotalSales=0},
-				new Department {Name="TVs", TotalSales=0},
+				new Department {Name="Music", TotalSales=0, Managers=musicManager},
+				new Department {Name="Movies", TotalSales=0, Managers=moviesManager},
+				new Department {Name="Computers", TotalSales=0, Managers=computersManager},
+				new Department {Name="TVs", TotalSales=0, Managers=tvsManager},
 			};
 			departments.ForEach(s => context.Departments.Add(s));
 			context.SaveChanges();
