@@ -221,7 +221,6 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Content\bootstrap.min.zip" />
     <Content Include="Content\lineicons\fonts\.DS_Store" />
     <Content Include="Content\lineicons\fonts\linecons.eot" />
     <Content Include="Content\lineicons\fonts\linecons.ttf" />
