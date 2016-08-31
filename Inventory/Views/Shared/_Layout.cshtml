@@ -97,16 +97,34 @@
                 </ul>
                 <!--  notification end -->
             </div>
-
-
-
-
-
-
+            <!-- BEGIN TEMPORARY DEV LINKS-->
             <div class="container">
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                        <li>@Html.ActionLink("Departments", "Index", "Departments")</li>
+                        <li>@Html.ActionLink("Products", "Index", "Products")</li>
+                        <li>@Html.ActionLink("Transactions", "Index", "Transactions")</li>
+                        <li>@Html.ActionLink("Employees", "Index", "Employees")</li>
+                        <li>@Html.ActionLink("Customers", "Index", "Customers")</li>
+                    </ul>
 
-                    @Html.Partial("_LoginPartial")
 
+                    <!-- END TEMPORARY DEV LINKS-->
+
+
+
+
+
+
+
+                    <div class="container">
+
+                        @Html.Partial("_LoginPartial")
+
+                    </div>
+                </div>
             </div>
             <!-- <div class="top-menu">
                   <ul class="nav pull-right top-menu">
@@ -116,94 +134,7 @@
              </div>-->
         </header>
         <!--header end-->
-        <!-- **********************************************************************************************************************************************************
-        MAIN SIDEBAR MENU
-        *********************************************************************************************************************************************************** -->
-        <!--sidebar start-->
-        <aside>
-            <div id="sidebar" class="nav-collapse ">
-                <!-- sidebar menu start-->
-                <ul class="sidebar-menu" id="nav-accordion">
 
-                    <p class="centered"><a href="~/Home/Jack" target="_blank"><img src="~/Content/img/JacksGrottoGreen.png" class="img-circle" width="150"></a></p>
-                    <h5 class="centered">CURRENT USER</h5>
-
-                    <li class="mt">
-                        <a class="active" href="~/#">
-                            <i class="fa fa-dashboard"></i>
-                            <span>Dashboard</span>
-                        </a>
-                    </li>
-
-                    <li class="sub-menu">
-                        <a href="javascript:;">
-                            <i class="fa fa-desktop"></i>
-                            <span>Our Company</span>
-                        </a>
-                        <ul class="sub">
-                            <li>@Html.ActionLink("About", "About", "Home")</li>
-                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                            @*<li><a href="panels.html">Panels</a></li>*@
-                        </ul>
-                    </li>
-
-                    <li class="sub-menu">
-                        <a href="javascript:;">
-                            <i class="fa fa-cogs"></i>
-                            <span>Departments</span>
-                        </a>
-                        <ul class="sub">
-                            <li>@Html.ActionLink("Departments", "Index", "Departments")</li>
-                            @*<li><a href="gallery.html">Gallery</a></li>
-                              <li><a href="todo_list.html">Todo List</a></li>*@
-                        </ul>
-                    </li>
-                    <li class="sub-menu">
-                        <a href="javascript:;">
-                            <i class="fa fa-book"></i>
-                            <span>Products</span>
-                        </a>
-                        <ul class="sub">
-                            <li>@Html.ActionLink("Products", "Index", "Products")</li>
-                        @*<li><a href="login.html">Login</a></li>
-                          <li><a href="lock_screen.html">Lock Screen</a></li>*@
-                        </ul>
-                    </li>
-                    <li class="sub-menu">
-                        <a href="javascript:;">
-                            <i class="fa fa-tasks"></i>
-                            <span>Finances</span>
-                        </a>
-                        <ul class="sub">
-                            <li>@Html.ActionLink("Transactions", "Index", "Transactions")</li>
-                        </ul>
-                    </li>
-                    <li class="sub-menu">
-                        <a href="javascript:;">
-                            <i class="fa fa-th"></i>
-                            <span>Employees</span>
-                        </a>
-                        <ul class="sub">
-                            <li>@Html.ActionLink("Employees", "Index", "Employees")</li>
-                            @*<li><a href="responsive_table.html">Responsive Table</a></li>*@
-                        </ul>
-                    </li>
-                    <li class="sub-menu">
-                        <a href="javascript:;">
-                            <i class="fa fa-bar-chart-o"></i>
-                            <span>Customers</span>
-                        </a>
-                        <ul class="sub">
-                            <li>@Html.ActionLink("Customers", "Index", "Customers")</li>
-                            @*<li><a href="chartjs.html">Chartjs</a></li>*@
-                        </ul>
-                    </li>
-
-                </ul>
-                <!-- sidebar menu end-->
-            </div>
-        </aside>
-        <!--sidebar end-->
         <section id="main-content">
             <section class="wrapper">
                 <div class="row">@RenderBody()</div>
